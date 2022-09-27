@@ -280,6 +280,7 @@
 
 /* Company */
 .top-company {
+    position: relative;
     border-bottom: 1px solid $color-black;
 
     @media screen and (min-width: $breakPoint) {}
@@ -292,6 +293,64 @@
 }
 
 .top-company-cont {}
+
+.top-company__head{
+    margin-top: 216px;
+    margin-bottom: 156px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: #000000;
+}
+.top-company__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1058px;
+    margin: auto;
+
+    @media screen and (min-width: $breakPoint) {}
+}
+.top-company__icon {
+    
+
+    @media screen and (min-width: $breakPoint) {}
+}
+.top-company__group {
+    position: relative;
+    max-width: 419px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    @media screen and (min-width: $breakPoint) {}
+}
+.top-company__txt {
+    position: absolute;
+    font-family: 'Noto Sans Japanese';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.8;
+    color: #000000;
+
+    @media screen and (min-width: $breakPoint) {}
+}
+.top-company__subTxt {
+    position: absolute;
+    font-family: 'Noto Sans Japanese';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #000000;
+
+    @media screen and (min-width: $breakPoint) {}
+}
 
 /* Profile */
 .top-profile {
