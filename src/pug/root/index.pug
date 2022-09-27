@@ -1,0 +1,175 @@
+extends ../_template/_extend
+
+block vars
+  -
+      var page = {
+          root: './',
+          class: 'page-home'
+      };
+      const breakpoint = "768px"
+
+block content
+    section.visual.js-menu-scroll
+        .visual__cont
+            .visual__nav.visual-nav.js-nav-txt
+                a(href="./#mission").visual-nav__txt
+                    | Mission
+                a(href="./#service").visual-nav__txt
+                    | Service
+                a(href="./#company").visual-nav__txt
+                    | Company
+                a(href="./#recruit").visual-nav__txt
+                    | Recruit
+                a(href="./contact").visual-nav__txt
+                    | Contact
+
+            .visual__text-cont
+                p.visual__text.js-visual-txt
+                    | Envision your ideal.
+                    br
+                    | Change the structure;
+                    br
+                    | integrate contradictions and conflicts.
+            .visual__logo
+                .visual-logo
+                    .visual-logo__wrapper.visual-logo__wrapper--logo1
+                        img.visual-logo__img.js-logo-img(src="./images/visual/top_visual_logo_01.svg" alt="H")
+                    .visual-logo__wrapper.visual-logo__wrapper--logo2
+                        img.visual-logo__img.js-logo-img(src="./images/visual/top_visual_logo_02.svg" alt="a")
+                    .visual-logo__wrapper.visual-logo__wrapper--logo3
+                        img.visual-logo__img.js-logo-img(src="./images/visual/top_visual_logo_03.svg" alt="u")
+                    .visual-logo__wrapper.visual-logo__wrapper--logo4
+                        img.visual-logo__img.js-logo-img(src="./images/visual/top_visual_logo_04.svg" alt="l")
+
+
+    section#mission.top-mission
+        .top-mission__cont
+            h2.c-ttl
+                | Mission
+            p.top-mission__intro
+                | やりたいことがない
+                br
+                | という世界から、
+                br
+                | やりたいことがある
+                br
+                | と言える日本にすること。
+            p.top-mission__txt
+                | 私たちは、ソフトウェアの世界で、日本人が日本製のプロダクトを誇れるようになることを目指しています。エンジニアの底上げ、日本の生産性向上などを行い、人々の自己改革を容易にし、個のモビリティを高めること、人材の素材適所を実現させることで、日本発のプロダクトを世界に発信できる土壌作りに貢献します。
+        picture.top-mission__img-cont
+            source(srcset="./images/mission/top_mission_pc_01.jpg" media=`(min-width: ${breakpoint})`)
+            img(src="./images/mission/top_mission_sp_01.jpg").top-mission__img
+
+    section#service.top-service
+        .top-service__cont
+            h2.c-ttl
+                | Service
+                .top-service__sub-cont
+                    .top-service__txt-cont
+                        h3.top-service__sub-ttl
+                            | プロダクト事業
+                        p.top-service__txt
+                            | 採用コンサルティング事業のノウハウをもとに、CXを改善するSaaSを開発しています。ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー。
+                    .top-service__img-cont
+                        picture.top-service__img-cont
+                            source(srcset="./images/service/top_service_pc_01.svg" media=`(min-width: ${breakpoint})`)
+                            img(src="./images/service/top_service_sp_01.svg").top-service__img
+                .top-service__sub-cont.top-service__sub-cont--reverse
+                    .top-service__txt-cont
+                        h3.top-service__sub-ttl
+                            | 採用コンサルティング事業
+                        p.top-service__txt
+                            | 上流の要件定義から実務支援まで一貫した支援を提供しています。ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー。
+                    .top-service__img-cont
+                        picture.top-service__img-cont
+                            source(srcset="./images/service/top_service_pc_02.svg" media=`(min-width: ${breakpoint})`)
+                            img(src="./images/service/top_service_sp_02.svg").top-service__img
+
+    section#company.top-company
+        .top-company__cont.top-company-cont
+            h2.c-ttl
+                | company
+
+
+    section.top-profile
+        .top-profile__cont
+            h4.top-profile__ttl
+                | Company Profile
+            table.top-profile-table
+                tbody.top-profile-table__body
+                    tr.top-profile-table__cont
+                        th.top-profile-table__ttl
+                            | 会社名
+                        td.top-profile-table__txt
+                            | 株式会社Haul
+                    tr.top-profile-table__cont
+                        th.top-profile-table__ttl
+                            | 代表取締役 CEO
+                        td.top-profile-table__txt
+                            | 平田 拓嗣
+                    tr.top-profile-table__cont
+                        th.top-profile-table__ttl
+                            | 設立
+                        td.top-profile-table__txt
+                            | 2018年9月13日
+                    tr.top-profile-table__cont
+                        th.top-profile-table__ttl
+                            | 所在地
+                        td.top-profile-table__txt
+                            | 〒153-0042 東京都目黒区青葉台1-14-4
+                            br
+                            | CONTRAL nakameguro 003
+                    tr.top-profile-table__cont
+                        th.top-profile-table__ttl
+                            | 事業
+                        td.top-profile-table__txt
+                            | 採用コンサルティング、SaaSの開発
+
+        .top-profile__cont
+            h4.top-profile__ttl
+                | CEO Profile
+            .top-profile-sec
+                picture.top-profile-sec__img-cont
+                    source(srcset="./images/profile/top_profile_pc_01.jpg" media=`(min-width: ${breakpoint})`)
+                    img(src="./images/profile/top_profile_sp_01.jpg").top-profile__img
+                .top-profile-sec__detail.top-profile-detail
+                    .top-profile-detail__head
+                        .top-profile-detail__cont
+                            .top-profile-detail__ttl
+                                | 平田 拓嗣
+                            span.top-profile-detail__small-txt
+                                | Hiroshi Hirata
+                        .top-profile-detail__txt
+                            | 代表取締役 CEO
+                    .top-profile-detail__body
+                        | AIスタートアップのABEJAの初期メンバーとして入社。HR部門にて、ビジネスサイドからAIエンジニアまで幅広い職種の採用に携わる。その後、HRBPとして独立し、ジャンルを問わずに複数のスタートアップ・ベンチャー及VCのHR支援に従事。各社経営陣に伴走し、ハンズオンで支援を行う。職種・業種問わず、全般的に支援実績があるが、特に昨今採用難易度が高まっているエンジニア職種の採用を得意とする。株式会社Haulを創業し、従来のコンサルティング型の採用支援に加え、プロダクトによる採用課題の解決にも着手。
+
+
+    section#recruit.top-recruit
+            .top-recruit__cont
+                h2.c-ttl
+                    | Recruit
+                p.top-recruit__intro
+                    | 誰もが望む、
+                    br.h-sp
+                    | 世界を切り拓く。
+                p.top-recruit__txt
+                    | 自分の手で、自分の道を切り拓く。それぞれの世界で、偉大なリーダーが生まれるチームにしたい。私たちが考える、Haulの組織像です。
+                a(href="#").top-recruit__link.top-recruit-link
+                    .top-recruit-link__txt
+                        | 採用情報を見る
+            picture.top-recruit__img-cont
+                source(srcset="./images/recruit/top_recruit_pc_01.jpg" media=`(min-width: ${breakpoint})`)
+                img(src="./images/recruit/top_recruit_sp_01.jpg").top-recruit__img
+
+    section
+        a(href="./contact").top-contact
+            .top-contact__cont
+                p.top-contact__detail
+                    | サービスや、採用など各種ご相談は、
+                    br
+                    | こちらからお問い合わせください。
+                .top-contact-link
+                    p.top-contact-link__txt
+                        | Contact Us
+

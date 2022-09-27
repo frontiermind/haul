@@ -1,0 +1,52 @@
+// ------------------------------
+// footer
+// ------------------------------
+
+.c-footer {
+    border-top: 1px solid $color-black;
+
+    @media screen and (min-width: $breakPoint) {}
+}
+
+.c-footer__cont {
+    padding: 14px 16px;
+
+    @media screen and (min-width: $breakPoint) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: get_vw(30) get_vw(40);
+    }
+}
+
+.c-footer__link {
+    @include inter;
+    font-size: 14px;
+    line-height: (17 / 14);
+
+    @media screen and (min-width: $breakPoint) {
+        font-size: get_vw(16);
+        line-height: (19 / 16);
+
+        &:hover {
+            opacity: .5;
+            transition: 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+    }
+}
+
+.c-footer__txt {
+    @include inter;
+    font-size: 14px;
+    line-height: (17 / 14);
+    margin-top: 40px;
+    text-align: right;
+
+    @media screen and (min-width: $breakPoint) {
+        margin-top: 0;
+        font-size: get_vw(16);
+        line-height: (19 / 16);
+    }
+
+}

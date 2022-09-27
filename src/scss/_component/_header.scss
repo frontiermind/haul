@@ -1,0 +1,205 @@
+// ------------------------------
+// header
+// ------------------------------
+
+.c-header {
+    &.is-active {
+        .c-header__btn {
+            border-color: $color-black;
+
+            @media screen and (min-width: $breakPoint) {}
+        }
+
+        .header-btn__txt--menu {
+            opacity: 0;
+            visibility: hidden;
+
+            @media screen and (min-width: $breakPoint) {}
+        }
+
+        .header-btn__txt--close {
+            opacity: 1;
+            visibility: visible;
+
+            @media screen and (min-width: $breakPoint) {}
+        }
+
+        .c-header__cont {
+            opacity: 1;
+            visibility: visible;
+
+            @media screen and (min-width: $breakPoint) {}
+        }
+    }
+
+    @media screen and (min-width: $breakPoint) {
+        height: $header-pc;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $color-black;
+        background: $color-gray1;
+
+        z-index: 101;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* ヘッダーメニュー　ボタン */
+.c-header__btn {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    border-left: 1px solid transparent;
+    transition: 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+
+    @include mq {
+        border-color: $color-black;
+        position: static;
+    }
+
+}
+
+.header-btn {
+    width: 88px;
+    height: $header-sp;
+    padding: 0;
+    background: transparent;
+
+    position: relative;
+
+    @media screen and (min-width: $breakPoint) {
+        width: get_vw(140);
+        height: $header-pc;
+
+        &:hover {
+            opacity: 0.5;
+            transition: 0.5s cubic-bezier(0.22, 1, 0.36, 1)
+        }
+    }
+}
+
+/* ヘッダーメニュー　テキスト */
+.header-btn__txt {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    @include inter;
+    font-size: 18px;
+    line-height: (22 / 18);
+
+    @media screen and (min-width: $breakPoint) {
+        font-size: get_vw(20);
+        line-height: (24 / 20);
+    }
+}
+
+.header-btn__txt--menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.header-btn__txt--close {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.c-header__cont {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+
+
+    @media screen and (min-width: $breakPoint) {
+        top: $header-pc;
+        height: calc(100% - #{$header-pc});
+    }
+}
+
+.header-cont {
+    background: $color-yellow1;
+
+    @media screen and (min-width: $breakPoint) {}
+}
+
+.header-cont__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $color-gray1;
+
+
+    @media screen and (min-width: $breakPoint) {
+        display: none;
+    }
+}
+
+/* ロゴ */
+.header-logo {
+    width: 104px;
+    height: $header-sp;
+    display: flex;
+    align-items: center;
+
+    @media screen and (min-width: $breakPoint) {
+        width: get_vw(140);
+        height: $header-pc;
+    }
+}
+
+.header-logo--pc {
+    display: none;
+
+    @media screen and (min-width: $breakPoint) {}
+}
+
+/* ヘッダーメニュー */
+.header-cont__nav {
+    border-top: 1px solid $color-black;
+    background: $color-yellow1;
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+    padding: 30px 20px 0 20px;
+    height: calc(100% - #{$header-sp});
+
+    // opacity: 0;
+    // visibility: hidden;
+
+    @media screen and (min-width: $breakPoint) {
+        opacity: 1;
+        border: none;
+        visibility: visible;
+        flex-direction: row;
+        background: none;
+        height: auto;
+    }
+}
+
+/* ヘッダーメニュー テキスト */
+.header-cont__txt {
+    font-size: 40px;
+    @include inter;
+
+
+    @media screen and (min-width: $breakPoint) {
+        &:hover {
+            opacity: .5;
+            transition: 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+    }
+}

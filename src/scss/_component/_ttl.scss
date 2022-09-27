@@ -1,0 +1,11 @@
+.c-ttl {
+    @include inter;
+    font-size: 30px;
+    line-height: (36 / 30);
+    letter-spacing: -0.02em;
+
+    @media screen and (min-width: $breakPoint) {
+        font-size: get_vw(40);
+        line-height: (48 / 40);
+    }
+}
