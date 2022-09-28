@@ -295,8 +295,8 @@
 .top-company-cont {}
 
 .top-company__head {
-    margin-top: 216px;
-    margin-bottom: 156px;
+    margin-top: 126px;
+    margin-bottom: 136px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -304,58 +304,127 @@
     line-height: 1.2;
     letter-spacing: -0.02em;
     color: #000000;
+
+    @media screen and (min-width: $breakPoint) {
+        margin-top: get_vw(160);
+        margin-bottom: get_vw(136);
+    }
+
+    @media screen and (min-width: 1440px) {
+        margin-top: 168px;
+        margin-bottom: 143px;
+    }
 }
+
 .top-company__main {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     max-width: 1157px;
-    height: 423px;
     margin: auto;
+    padding: 0;
 
-    @media screen and (min-width: $breakPoint) {}
+    @media screen and (min-width: $breakPoint) {
+        height: 423px;
+        flex-direction: row;
+        padding: 0 30px;
+    }
 }
 
 .top-company__icon {
     max-width: 600px;
-    height: 244px;
+    height: 165px;
     width: 100%;
     display: flex;
     justify-content: center;
     position: relative;
+
+    @media screen and (min-width: $breakPoint) {
+        height: 244px;
+    }
 }
 
 .top-company_icon_logo {
     position: relative;
+    width: 100%;
+
+    svg {
+        width: 100%;
+        vertical-align: bottom;
+    }
+
     @media screen and (min-width: $breakPoint) {}
 }
 
 .top-company_icon_bottom {
     position: absolute;
-    right: 10px;
-    bottom: -30px;
+    width: 20%;
+    right: 1.5%;
+    bottom: 0;
+
+    @media screen and (min-width: $breakPoint) {
+        right: 10px;
+        bottom: -30px;
+    }
 }
 
 .top-company_icon_loop {
+    width: 76%;
     display: flex;
     position: absolute;
     margin: auto;
     margin-top: 3px;
+
+    @media screen and (min-width: $breakPoint) {
+        width: 65%;
+    }
+}
+
+.top-company_icon_loop_wrapper {
+    display: flex;
+    width: 69%;
+    margin: auto;
+
+    @media screen and (min-width: $breakPoint) {}
+}
+
+.top-company_icon_loop__left {
+    width: 50%;
+
+    svg {
+        width: 100%;
+        vertical-align: bottom;
+    }
 }
 
 .top-company_icon_loop__right {
+    width: 50%;
     margin-left: -1px;
+
+    svg {
+        width: 100%;
+        vertical-align: bottom;
+    }
 }
 
 .top-company_icon_loop__line {
     position: absolute;
-    left: -24%;
-    top: -10%;
+    left: -1%;
+    top: -11%;
+    width: 100%;
+
+    @media screen and (min-width: $breakPoint) {}
 
     svg {
+        width: 100%;
+        vertical-align: bottom;
+
         .line {
             stroke-dasharray: 2000;
-            fill:none;stroke:#000;stroke-miterlimit:10
+            fill: none;
+            stroke: #000;
+            stroke-miterlimit: 10
         }
     }
 }
@@ -367,48 +436,72 @@
     height: 100%;
     display: flex;
     align-items: center;
+    height: 100px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 45px;
 
-    @media screen and (min-width: $breakPoint) {}
+    @media screen and (min-width: $breakPoint) {
+        margin-top: 0;
+    }
 }
 
 .top-company__txt {
+    @include noto;
     position: absolute;
-    font-family: 'Noto Sans Japanese';
+    font-size: 26px;
     font-style: normal;
     font-weight: 400;
-    font-size: 32px;
     line-height: 1.8;
     color: #000000;
+    text-align: center;
 
-    @media screen and (min-width: $breakPoint) {}
+    @media screen and (min-width: $breakPoint) {
+        font-size: 32px;
+        text-align: left;
+    }
 }
+
 .top-company__middleTxt {
+    @include noto;
     position: absolute;
-    font-family: 'Noto Sans Japanese';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
     line-height: 1.8;
     color: #000000;
 
-    @media screen and (min-width: $breakPoint) {}
+    @media screen and (min-width: $breakPoint) {
+        font-size: 18px;
+    }
 }
+
 .top-company__bottomTxt {
+    @include noto;
     position: absolute;
-    font-family: 'Noto Sans Japanese';
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
     line-height: 1.8;
     color: #000000;
 
-    @media screen and (min-width: $breakPoint) {}
+    @media screen and (min-width: $breakPoint) {
+        font-size: 18px;
+    }
 }
 
 .top-company__circle {
+    width: 100%;
     margin: auto;
 
+    @media screen and (min-width: $breakPoint) {
+        width: 74%;
+    }
+
     svg {
+        width: 100%;
+        vertical-align: bottom;
+
         .cls-1 {
             fill: #c0ff00;
         }
