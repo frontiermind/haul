@@ -294,7 +294,7 @@
 
 .top-company-cont {}
 
-.top-company__head{
+.top-company__head {
     margin-top: 216px;
     margin-bottom: 156px;
     font-family: 'Inter';
@@ -309,16 +309,57 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1058px;
+    max-width: 1157px;
+    height: 423px;
     margin: auto;
 
     @media screen and (min-width: $breakPoint) {}
 }
-.top-company__icon {
-    
 
+.top-company__icon {
+    max-width: 600px;
+    height: 244px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.top-company_icon_logo {
+    position: relative;
     @media screen and (min-width: $breakPoint) {}
 }
+
+.top-company_icon_bottom {
+    position: absolute;
+    right: 10px;
+    bottom: -30px;
+}
+
+.top-company_icon_loop {
+    display: flex;
+    position: absolute;
+    margin: auto;
+    margin-top: 3px;
+}
+
+.top-company_icon_loop__right {
+    margin-left: -1px;
+}
+
+.top-company_icon_loop__line {
+    position: absolute;
+    left: -24%;
+    top: -10%;
+
+    svg {
+        .line {
+            stroke-dasharray: 2000;
+            fill:none;stroke:#000;stroke-miterlimit:10
+        }
+    }
+}
+
 .top-company__group {
     position: relative;
     max-width: 419px;
@@ -329,6 +370,7 @@
 
     @media screen and (min-width: $breakPoint) {}
 }
+
 .top-company__txt {
     position: absolute;
     font-family: 'Noto Sans Japanese';
@@ -340,7 +382,7 @@
 
     @media screen and (min-width: $breakPoint) {}
 }
-.top-company__subTxt {
+.top-company__middleTxt {
     position: absolute;
     font-family: 'Noto Sans Japanese';
     font-style: normal;
@@ -348,6 +390,44 @@
     font-size: 18px;
     line-height: 1.8;
     color: #000000;
+
+    @media screen and (min-width: $breakPoint) {}
+}
+.top-company__bottomTxt {
+    position: absolute;
+    font-family: 'Noto Sans Japanese';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #000000;
+
+    @media screen and (min-width: $breakPoint) {}
+}
+
+.top-company__circle {
+    margin: auto;
+
+    svg {
+        .cls-1 {
+            fill: #c0ff00;
+        }
+
+        .cls-2 {
+            fill: #9bc8ff;
+        }
+
+        .cls-3 {
+            fill: #083f4d;
+        }
+
+        .cls-4 {
+            fill: none;
+            stroke: #000;
+            stroke-miterlimit: 10;
+            stroke-width: 1.39px;
+        }
+    }
 
     @media screen and (min-width: $breakPoint) {}
 }
