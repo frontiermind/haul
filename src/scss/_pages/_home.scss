@@ -324,6 +324,7 @@
     max-width: 1157px;
     margin: auto;
     padding: 0;
+    overflow: hidden;
 
     @media screen and (min-width: $breakPoint) {
         height: 423px;
