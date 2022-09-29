@@ -45,8 +45,6 @@
         background: $color-gray1;
 
         z-index: 101;
-        opacity: 0;
-        visibility: hidden;
     }
 }
 
@@ -126,6 +124,8 @@
     @media screen and (min-width: $breakPoint) {
         top: $header-pc;
         height: calc(100% - #{$header-pc});
+        display: flex;
+        justify-content: flex-end;
     }
 }
 
@@ -163,7 +163,9 @@
 .header-logo--pc {
     display: none;
 
-    @media screen and (min-width: $breakPoint) {}
+    @media screen and (min-width: $breakPoint) {
+        display: block;
+    }
 }
 
 /* ヘッダーメニュー */
@@ -181,12 +183,13 @@
     // visibility: hidden;
 
     @media screen and (min-width: $breakPoint) {
-        opacity: 1;
+        // opacity: 1;
         border: none;
-        visibility: visible;
-        flex-direction: row;
-        background: none;
-        height: auto;
+        // visibility: visible;
+        border-left: 1px solid $color-black;
+        width: 50%;
+        height: calc(100vh - #{$header-pc});
+
     }
 }
 
@@ -197,6 +200,8 @@
 
 
     @media screen and (min-width: $breakPoint) {
+        font-size: get_vw(50);
+
         &:hover {
             opacity: .5;
             transition: 0.5s cubic-bezier(0.22, 1, 0.36, 1);

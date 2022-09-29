@@ -1,0 +1,20 @@
+// ------------------------------
+// headImg
+// ------------------------------
+
+.c-headImg {
+    border-bottom: 1px solid;
+    margin-bottom: 30px;
+
+    &--green{
+        border-color: $color-gray2;
+    }
+
+    &--white{
+        border-color: $color-black;
+    }
+
+    @media screen and (min-width: $breakPoint) {
+        margin-bottom: 16px;
+    }
+}

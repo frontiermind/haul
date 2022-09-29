@@ -1,0 +1,67 @@
+// ------------------------------
+// page-thanks
+// ------------------------------
+
+.page-thanks {
+
+    background: $color-green;
+
+    .cont {
+        color: $color-white;
+
+        &__ttl {
+            color: $color-white;
+            margin-bottom: 104px;
+            @media screen and (max-width: $breakPoint) {
+                font-size: 3rem;
+                margin-bottom: 121px;
+            }
+        }
+
+        &__wrapper {
+            @include noto;
+            width: 69.83%;
+            margin-left: auto;
+            @media screen and (max-width: $breakPoint) {
+                width: 82.08%;
+            }
+        }
+
+        &__lead{
+            font-size: 3.2rem;
+            margin-bottom: 24px;
+            @media screen and (max-width: $breakPoint) {
+                font-size: 2.6rem;
+                margin-bottom: 16px;
+            }
+        }
+
+        &__txt{
+            font-size: 1.8rem;
+            margin-bottom: 60px;
+            @media screen and (max-width: $breakPoint) {
+                font-size: 1.6rem;
+                margin-bottom: 30px;
+            }
+        }
+
+        &__img{
+            width: 47.51%;
+            margin-bottom: 400px;
+            @media screen and (max-width: $breakPoint) {
+                width: 90.54%;
+                margin-bottom: 300px;
+            }
+        }
+    }
+
+
+    .c-footer {
+        color: $color-white;
+        border-top: 1px solid $color-gray2;
+
+        a {
+            color: $color-white;
+        }
+    }
+}

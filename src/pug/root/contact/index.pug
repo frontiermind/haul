@@ -1,0 +1,80 @@
+extends ../../_template/_extend
+
+block vars
+    -
+        var page = {
+            root: '../',
+            class: 'page-contact'
+        };
+    -
+
+block content
+    .c-headImg.c-headImg--green
+        .c-headImg__wrapper
+            img(src=page.root + "assets/images/contact/kv.jpg")
+                
+    .cont
+        .l-inner
+            h2.c-ttl.cont__ttl
+                | Contact
+            .cont__wrapper
+                p.cont__lead
+                    | ご質問やご相談などのお問い合わせは、下記のフォームをご記入頂き、個人情報の取り扱いに同意の上、お問い合わせください。後日担当者よりご連絡差し上げます。
+                .form
+                    //- formタグのclass, action, methodを変更しないでください
+                    form.formrun(action="https://form.run/api/v1/r/al7j459wvsa37ju3amxw25kx" method="post" data-formrun-saving="true")
+                        ul.form__list
+                            li.form__item
+                                .form__head
+                                    label.form__name(for="company") 会社名
+                                .form__body
+                                    input.form__text#company(type="text" name="company" placeholder="株式会社Haul")
+                            li.form__item
+                                .form__head
+                                    label.form__name(for="dept_pos") 部署／役職
+                                .form__body
+                                    input.form__text#dept_pos(type="text" name="dept_pos" placeholder="広報部 部長")
+                            li.form__item
+                                .form__head
+                                    label.form__name(for="name") 氏名
+                                        span *
+                                .form__body
+                                    input.form__text#name(type="text" name="name" placeholder="山田 太郎" data-formrun-required)
+                                    .form__error(data-formrun-show-if-error="name")
+                                        | *氏名を入力してください
+                            li.form__item
+                                .form__head
+                                    label.form__name(for="email") メールアドレス
+                                .form__body
+                                    input.form__text#email(type="text" name="email" placeholder="yamada@example.com" data-formrun-required)
+                                    .form__error(data-formrun-show-if-error="email")
+                                        | *メールアドレスを正しく入力してください
+                            li.form__item
+                                .form__head
+                                    label.form__name(for="radio") お問い合わせ項目
+                                .form__body.form__body--radio
+                                    label.form__radio
+                                        input(type="radio" name="category" value="サービスに関するお問い合わせ" checked)
+                                        span サービスに関するお問い合わせ
+                                    label.form__radio
+                                        input(type="radio" name="category" value="採用に関するお問い合わせ")
+                                        span 採用に関するお問い合わせ
+                                    label.form__radio
+                                        input(type="radio" name="category" value="その他")
+                                        span その他
+                            li.form__item
+                                .form__head
+                                    label.form__name(for="message") お問い合わせ詳細
+                                        span *
+                                .form__body
+                                    textarea.form__textarea(name="message" placeholder="お問い合わせ内容をご記入ください" data-formrun-required)
+                                    .form__error(data-formrun-show-if-error="message")
+                                        | *お問い合わせ内容を入力してください
+                            li.form__item.form__item--check
+                                label.form__check
+                                    input(type="checkbox" name="check" data-formrun-required)
+                                    span 個人情報の取り扱いに同意する
+                                    .form__error(data-formrun-show-if-error="check")
+                                        | *送信には個人情報の取り扱いへの同意が必要です
+                        button.form__btn(type="submit" data-formrun-submitting-text="送信中...")
+                            | 送信する

@@ -1,0 +1,272 @@
+// ------------------------------
+// page-contact
+// ------------------------------
+
+.page-contact {
+
+    background: $color-green;
+
+    .cont {
+        color: $color-white;
+
+        &__ttl {
+            font-size: 4rem;
+            line-height: 1.2;
+            letter-spacing: -.02em;
+            color: $color-white;
+            margin-bottom: 114px;
+            @media screen and (max-width: $breakPoint) {
+                font-size: 3rem;
+                margin-bottom: 121px;
+            }
+        }
+
+        &__wrapper {
+            @include noto;
+            width: 69.83%;
+            margin-left: auto;
+            @media screen and (max-width: $breakPoint) {
+                width: 82.08%;
+            }
+        }
+
+        &__lead{
+            font-size: 1.8rem;
+            margin-bottom: 160px;
+            @media screen and (max-width: $breakPoint) {
+                font-size: 1.6rem;
+                margin-bottom: 100px;
+            }
+        }
+    }
+
+    .form {
+        margin-bottom: 400px;
+
+        @media screen and (max-width: $breakPoint) {
+            margin-bottom: 360px;
+        }
+
+        &__item{
+            border-top: 1px solid $color-gray2;
+            display: flex;
+            padding: 8px 0 40px;
+
+            @media screen and (max-width: $breakPoint) {
+                flex-wrap: wrap;
+                padding: 7px 0 38px;
+            }
+
+            &--check {
+                padding: 16px 0 35px 221px;
+                @media screen and (max-width: $breakPoint) {
+                    padding: 16px 0 32px 0;
+                }
+            }
+        }
+
+        &__head {
+            width: 19.26%;
+            min-width: 173px;
+            font-size: 2rem;
+            letter-spacing: .02em;
+            margin: 6px 58px 0 0;
+
+            @media screen and (max-width: $breakPoint) {
+                width: 100%;
+                font-size: 1.8rem;
+                margin: 0 0 6px 0;
+            }
+
+            span {
+                color: #FF3B2E;
+            }
+        }
+
+        &__body {
+            flex: 1;
+
+            &--radio {
+                flex: initial;
+
+                @media screen and (max-width: $breakPoint) {
+                    margin-top: 12px;
+                }
+            }
+        }
+
+        &__radio {
+            cursor: pointer;
+            display: block;
+            margin-bottom: 12px;
+            &:nth-last-child(1){
+                margin-bottom: 0;
+            }
+
+            @media screen and (max-width: $breakPoint) {
+                margin-bottom: 8px;
+            }
+
+            input {
+                opacity: 0;
+                appearance: none;
+                position: absolute;
+                & + span::before {
+                    content: '';
+                    box-sizing: border-box;
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 50%;
+                    margin-right: 8px;
+                    position: relative;
+                    top: -.1em;
+                    display: inline-block;
+                    vertical-align: middle;
+                    background: $color-gray1;
+                    border: 1px solid $color-gray1;
+
+                    @media screen and (max-width: $breakPoint) {
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+                &:checked + span:before {
+                    background: $color-black;
+                    border: 5px $color-yellow1 solid;
+                    @media screen and (max-width: $breakPoint) {
+                        border: 4px $color-yellow1 solid;
+                    }
+                }
+            }
+            span {
+                font-size: 1.8rem;
+                @media screen and (max-width: $breakPoint) {
+                    font-size: 1.6rem;
+                }
+            }
+
+            &__error {
+                display: block;
+            }
+        }
+
+        &__text, &__textarea {
+                width: 100%;
+                padding: 6px 15px;
+                background: #165262;
+                outline: none;
+                appearance: none;
+                font-size: 1.8rem;
+                line-height: 1.8;
+
+                @media screen and (max-width: $breakPoint){
+                    font-size: 1.6rem;
+                    padding: 6px 10px;
+                }
+
+                &::placeholder {
+                    color: #98B6BD;
+                }
+        }
+
+        &__textarea{
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        &__check {
+            cursor: pointer;
+            display: block;
+
+            span {
+                position: relative;
+                font-size: 1.8rem;
+
+                @media screen and (max-width: $breakPoint) {
+                    font-size: 1.6rem;
+                }
+            }
+            input {
+                opacity: 0;
+                appearance: none;
+                position: absolute;
+                & + span::before {
+                    content: '';
+                    box-sizing: border-box;
+                    width: 18px;
+                    height: 18px;
+                    margin-right: 8px;
+                    position: relative;
+                    top: -.1em;
+                    display: inline-block;
+                    vertical-align: middle;
+                    background: $color-gray1;
+                    border: 1px solid $color-gray1;
+
+                    @media screen and (max-width: $breakPoint) {
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+                &:checked + span:before {
+                    background: $color-yellow1;
+                    border: 1px solid $color-yellow1;
+                }
+                &:checked + span:after {
+                    content: '';
+                    position: absolute;
+                    width: 11px;
+                    height: 6px;
+                    top: 8px;
+                    left: 3px;
+                    border-left: 2px solid $color-black;
+                    border-bottom: 2px solid $color-black;
+                    transform: rotate(-50deg);
+
+                    @media screen and (max-width: $breakPoint) {
+                        width: 10px;
+                        height: 5px;
+                        top: 8px;
+                        left: 2px;
+                    }
+                }
+            }
+
+            &__error {
+                display: block;
+            }
+        }
+
+        &__btn{
+            background: none;
+            font-size: 2rem;
+            @include transition;
+            padding: 0;
+            margin-left: 221px;
+
+            &:hover{
+                opacity: .5;
+            }
+
+            @media screen and (max-width: $breakPoint) {
+                font-size: 1.8rem;
+                margin-left: 0;
+            }
+        }
+
+        &__error {
+            color: #FF3B2E;
+            line-height: 1;
+            margin-top: 6px;
+        }
+    }
+
+    .c-footer {
+        color: $color-white;
+        border-top: 1px solid $color-gray2;
+
+        a {
+            color: $color-white;
+        }
+    }
+}

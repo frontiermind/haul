@@ -2,7 +2,7 @@ header.c-header.js-header
     h1.header-logo.header-logo--pc
             img(src="./images/common/logo.svg")
     .c-header__btn
-        button.header-btn.js-header-btn
+        button.header-btn.js-header-trigger
             span.header-btn__txt.header-btn__txt--menu
                 | Menu
             span.header-btn__txt.header-btn__txt--close
@@ -12,14 +12,14 @@ header.c-header.js-header
             h1.header-logo
                 img(src="./images/common/logo.svg")
 
-        .header-cont__nav
-            a(href="./#mission").header-cont__txt
+        .header-cont__nav.js-menu
+            a(href="./#mission").header-cont__txt.js-header-trigger
                 | Mission
-            a(href="./#service").header-cont__txt
+            a(href="./#service").header-cont__txt.js-header-trigger
                 | Service
-            a(href="./#company").header-cont__txt
+            a(href="./#company").header-cont__txt.js-header-trigger
                 | Company
-            a(href="./#recruit").header-cont__txt
+            a(href="./#recruit").header-cont__txt.js-header-trigger
                 | Recruit
             a(href="./contact").header-cont__txt
                 | Contact

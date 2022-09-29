@@ -1,0 +1,98 @@
+// ------------------------------
+// page-privacy
+// ------------------------------
+
+.page-privacy {
+
+    background: $color-white;
+
+    .cont {
+
+        &__ttl {
+            font-size: 4rem;
+            line-height: 1.2;
+            letter-spacing: -.02em;
+            margin-bottom: 140px;
+            @media screen and (max-width: $breakPoint) {
+                font-size: 3rem;
+                margin-bottom: 120px;
+            }
+        }
+
+        &__wrapper {
+            @include noto;
+            width: 69.83%;
+            margin-left: auto;
+            @media screen and (max-width: $breakPoint) {
+                width: 82.08%;
+            }
+        }
+
+        &__lead{
+            font-size: 18px;
+            margin-bottom: 140px;
+            @media screen and (max-width: $breakPoint) {
+                font-size: 1.6rem;
+                margin-bottom: 120px;
+            }
+        }
+
+        &__box {
+            margin-bottom: 60px;
+        }
+
+        &__head {
+            font-size: 2rem;
+            letter-spacing: .02em;
+            margin-bottom: 16px;
+            @media screen and (max-width: $breakPoint) {
+                font-size: 1.8rem;
+            }
+        }
+
+        &__txt {
+            font-size: 1.8rem;
+            line-height: 1.8;
+            margin-bottom: 16px;
+            @media screen and (max-width: $breakPoint) {
+                font-size: 1.6rem;
+            }
+        }
+
+        &__list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        &__item{
+            counter-increment: item;
+            position: relative;
+            padding-left: 2.8rem;
+            &:before {
+                content: counter(item);
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        &__unit {
+            display: flex;
+            font-size: 1.8rem;
+            line-height: 1.8;
+            margin-bottom: 4px;
+            @media screen and (max-width: $breakPoint) {
+                font-size: 1.6rem;
+            }
+        }
+
+        &__heading {
+            min-width: 70px;
+            margin-right: 4px;
+            @media screen and (max-width: $breakPoint) {
+                min-width: 60px;
+            }
+        }
+    }
+}
